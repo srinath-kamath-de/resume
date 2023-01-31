@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srinath Kamath - Resume</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Srinath Kamath - MSc. Mechanical Engineering & Management 😁🚀">
@@ -43,9 +43,12 @@
     <meta property="twitter:description"
         content="Mechanical engineering graduate with strong people skills and 4+ years of proven track record in the technology and services industries. I use my abilities to develop simple, long-term solutions for a better future.">
     <meta property="twitter:image" content="https://srinath-kamath-de.github.io/resume/assets/images/meta-image.jpeg">
-</head>
 
-<body>
+    <!-- html2pdf CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -136,7 +139,23 @@
             }
         }
     </style>
-    <div class="container-fluid pt-3 pb-3">
+</head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+<body id="resume">
+    <!-- <button class="btn" id="download-button">Download as PDF</button> -->
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light"
+        style="display: flex; place-content: space-between;">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/icons/letter-s.ico" width="30" height="30" alt="">
+        </a>
+        <button class="btn btn-dark-outline material-symbols-outlined" id="download-button" data-toggle="tooltip"
+            data-placement="bottom" title="Download CV">
+            download
+            </span>
+    </nav>
+    <div class="container-fluid pt-3 pb-3" id="container">
         <section id="contact">
             <a href="#contact">
                 <h1>Srinath Kamath</h1>
@@ -377,5 +396,26 @@
         </footer>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script>
+    const button = document.getElementById('download-button');
+
+    function generatePDF() {
+        // Choose the element that your content will be rendered to.
+        const element = document.getElementById('container');
+        // Choose the element and save the PDF for your user.
+        html2pdf().from(element).save();
+    }
+
+    button.addEventListener('click', generatePDF);
+</script>
 
 </html>
