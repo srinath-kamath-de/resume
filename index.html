@@ -43,7 +43,6 @@
     <style>
         section {
             margin: 20px;
-            /* font-family: 'Roboto', monospace; */
         }
 
         .col-4 {
@@ -71,8 +70,8 @@
 
         /* Custom classes */
         .content-card {
-            margin-top: 10px;
-            margin-left: 10px;
+            margin-top: 0.25rem;
+            margin-left: 0.25rem;
         }
 
         .content-title {
@@ -84,8 +83,47 @@
         }
 
         .chip-card {
-            margin-top: 10px;
-            margin-left: 10px;
+            margin-top: 0.25rem;
+            margin-left: 0.25rem;
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .content-card {
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .chip-card {
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .col-sm,
+            .col-md {
+                padding: 0;
+            }
+
+            .row,
+            section {
+                font-size: small;
+            }
+
+            section {
+                background-color: #f1f1f1;
+                margin: 10px 0 !important;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+
+            .col-sm h6 {
+                font-size: medium;
+            }
+
+            .col-sm span,
+            li {
+                font-size: small;
+            }
         }
     </style>
     <div class="container-fluid pt-3 pb-3">
@@ -136,12 +174,12 @@
                 </a>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Master's in Mechanical Engineering & Management</h6>
                     <span id="university">Technische Universität Hamburg</span><br>
                     <span id="date">Oct. 2022 - Present</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>Pursuing Master's in Mechanical Engineering & Management with a focus on Management studies.
                         </li>
@@ -149,12 +187,12 @@
                 </div>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Bachelors in Mechanical Engineering</h6>
                     <span id="university">Mahatma Gandhi University</span><br>
                     <span id="date">Oct. 2013 - Mar. 2017</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>Graduated with Honors in Mechanical Engineering</li>
                         <li>Focused on design and product innovation</li>
@@ -171,12 +209,12 @@
                 </a>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Software Developer</h6>
                     <span id="company">ISPG Technologies India Ltd.</span><br>
                     <span id="date">Oct. 2021 - Sep. 2022</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>RCMA Realtors - Database design, architect modular & reusable APIs</li>
                         <li>Dubai RTA - Create microservices to handle transactions, bookings & schedule driving tests
@@ -185,12 +223,12 @@
                 </div>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Frontend Developer</h6>
                     <span id="company">Filed.com (On Contract)</span><br>
                     <span id="date">Mar. 2021 - Oct. 2021</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>Ideation of UI components with optimum UX</li>
                         <li>Design reusable & manageable UI components</li>
@@ -199,12 +237,12 @@
                 </div>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Software Developer</h6>
                     <span id="company">Roninaks Ventures Pvt. Ltd.</span><br>
                     <span id="date">Dec. 2018 - Dec. 2020</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>Developing progressive web apps in Angular</li>
                         <li>Delegate tasks to junior developers</li>
@@ -220,12 +258,12 @@
                     <h2>Management Experience</h2>
                 </a>
                 <div class="row content-card">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md col-sm">
                         <h6 class="content-title">Freelance Web-developer</h6>
                         <span id="company">(Remote work)</span><br>
                         <span id="date">Jan. 2021 - Jan. 2022</span>
                     </div>
-                    <div class="col-8">
+                    <div class="col-lg-8 col-md col-sm">
                         <ul>
                             <li>Suggest viable business solutions to clients</li>
                             <li>Networking with businesses & potential clients</li>
@@ -236,12 +274,12 @@
                     </div>
                 </div>
                 <div class="row content-card">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md col-sm">
                         <h6 class="content-title">Fundraising Intern</h6>
                         <span id="company">Make A Difference</span><br>
                         <span id="date">Jun. 2015 - Jun. 2016</span>
                     </div>
-                    <div class="col-8">
+                    <div class="col-lg-8 col-md col-sm">
                         <ul>
                             <li>Brainstorming ideas for charity events to attract HNIs</li>
                             <li>Brainstorm & practice sales pitching techniques</li>
@@ -259,11 +297,11 @@
                 </a>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">GymSync</h6>
                     <span id="date">Jun. 2021 - Present</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>Build a health-conscious community based on the gamification logic</li>
                         <li>Workout scheduling between trainers & clients.</li>
@@ -272,11 +310,11 @@
                 </div>
             </div>
             <div class="row content-card">
-                <div class="col-4">
+                <div class="col-lg-4 col-md col-sm">
                     <h6 class="content-title">Grovio</h6>
                     <span id="date">Oct. 2018 - Dec. 2019</span>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md col-sm">
                     <ul>
                         <li>A sustainable solution to waste-management & organic farming</li>
                         <li>Uses food waste to create organic fertiliser for growing vegetables in an urban environment
